@@ -15,3 +15,4 @@ Steps for Deploy lambda in aws(using sam cli).
     
     5: aws cloudformation deploy --template-file <path-to-file/template-out.yaml --stack-name <STACK_NAME> --capabilities CAPABILITY_IAM
     6: Check your Service AWS cloudformation and your lambda. That's it! Bingo. 
+    Note(I have already creted IAM role for accessing cloudformation resource using console. 
