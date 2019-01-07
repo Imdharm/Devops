@@ -2,7 +2,7 @@
 This is a simple hello world node js lambda. Which we are going to deploy in aws using sam template via sam CLI(test.yaml).
 Prerequist :
    1: Lambda function with lambda handler.
-   2: Yaml template for lambda.
+   2: Yaml template for lambda. 
    3: AWS ACCOUNT : If not create here - https://aws.amazon.com/console/
    
 
