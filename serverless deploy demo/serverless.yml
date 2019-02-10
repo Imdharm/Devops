@@ -1,0 +1,41 @@
+
+service: demo-serverless # NOTE: update this with your service name
+
+
+provider:
+  name: aws
+  runtime: python2.7
+  stage: dev           # Update ths with your stage name. 
+
+
+plugins:
+  - serverless-python-requirements
+
+
+custom:
+  pythonRequirements:
+    slim: true       # remove unwanted modules in zip file
+
+
+# you can add packaging information here
+package:
+  individually: true
+  exclude:     
+    - "./**"   # It will exclude all the files/folders inside demo folder.
+
+functions:
+  demo:
+    handler: demo.lambda_handler   
+    module: demo     # create module seprately for demo folder
+    package:
+      individually: true      
+      include:                  
+        - demo/demo.py
+    name: demo                
+  hello:
+    handler: hello.lambda_handler
+    package:
+      individually: true
+      include:
+        - hello.py
+    name: hello
