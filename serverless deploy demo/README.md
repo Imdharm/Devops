@@ -28,10 +28,11 @@ And we need to add seprate requirement.txt file in demo folder where required mo
 
 
 For making seprate module:
-    functions:
-      demo:
-        handler: demo.lambda_handler   
-        module: demo       
+
+- functions:
+   - demo:
+   - handler: demo.lambda_handler   
+   - module: demo          
 
 
 Deploy:
